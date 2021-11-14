@@ -8,21 +8,39 @@ body {
     min-height: 100vh;
     font-family: 'Raleway', sans-serif;
 }
+a {
+    color: #4e8098;
+}
+a:visited {
+    color: #60486B;
+}
 main {
     flex-grow: 1;
 }
 .btn-primary {
+    color: #fff;
     background-color: #60486B;
     border-color: #60486B;
     font-weight: 700;
     text-transform: uppercase;
     font-size: .8rem;
 }
+.btn-primary:visited {
+    color: #fff;
+}
+.btn-primary:hover {
+    background-color: #3f2e46;
+    border-color: #3f2e46;
+}
 h1, h2 {
-    font-weight: 200;
+    font-weight: 300;
+    color: #1E2019;
 }
 .card {
     border-top: 2px solid #00a9a5;
+}
+.card + .card {
+    margin-top: 32px;
 }
 .bg-dark {
     /* override bs ! */
@@ -35,12 +53,15 @@ h1, h2 {
 .bg-dark img {
     filter:  brightness(0) invert(1);
 }
+p.lead small {
+    font-size: .9rem;
+}
 
 .icons li > a {
     padding: 4px 8px;
 }
 
-footer a {
+footer a, footer a:visited {
     color: #00a9a5;
 }
 footer ul, footer p {
@@ -71,4 +92,59 @@ footer p {
 .feature-image h1, .feature-image .lead {
     z-index: 1;
     position: relative;
+    color: #f7f0f0;
+}
+h4 .far {
+    color: #4e8098;
+    opacity: .5;
+}
+.image-grid {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+}
+.image-grid {
+    border: 1px solid #ccc;
+    border-left: 0;
+    border-top: 0;
+}
+.image-grid > div {
+    width: 33.333%;
+    padding-bottom: 33.333%;
+    background-color: #000;
+    border: 1px solid #ccc;
+    border-bottom: 0; 
+    border-right: 0;
+    background-size: cover;
+}
+.image-grid.image-smile {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.image-grid.image-smile > div {
+    width: calc(100%/8);
+    padding-bottom: calc(100%/8);    
+    background-color: #f7f0f0;
+}
+.image-grid > div.active {
+    background-color: #000;
+    cursor: pointer;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+figcaption {
+    font-size: .7rem;
+    padding: 4px 0;
+}
+h2 a, .alert a {
+    text-decoration: none;
+}
+h2 a:hover, .alert a:hover {
+    text-decoration: underline;
+}
+.alert a {
+    font-weight: bold;
 }

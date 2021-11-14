@@ -1,0 +1,74 @@
+/* CSV */
+/* 60486b,f7f0f0,1e2019,00a9a5,4e8098 */
+
+body {
+    background-color: #f7f0f0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Raleway', sans-serif;
+}
+main {
+    flex-grow: 1;
+}
+.btn-primary {
+    background-color: #60486B;
+    border-color: #60486B;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: .8rem;
+}
+h1, h2 {
+    font-weight: 200;
+}
+.card {
+    border-top: 2px solid #00a9a5;
+}
+.bg-dark {
+    /* override bs ! */
+    background-color: #1E2019 !important; 
+}
+.bg-dark.bg-darker {
+    /* override bs ! */
+    background-color: #000 !important; 
+}
+.bg-dark img {
+    filter:  brightness(0) invert(1);
+}
+
+.icons li > a {
+    padding: 4px 8px;
+}
+
+footer a {
+    color: #00a9a5;
+}
+footer ul, footer p {
+    margin-bottom: 0;
+}
+footer p {
+    font-size: .8rem;
+}
+.feature-image-right {
+    background-image: url('https://images.unsplash.com/photo-1528722828814-77b9b83aafb2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80');
+    background-size: 40%;
+    background-position: 90% 50%;
+    background-repeat: no-repeat;
+}
+.feature-image::before {
+    content: "";
+    background-image: url('/resources/images/andy-holmes-rCbdp8VCYhQ-unsplash.jpg');
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: .5;
+}
+.feature-image h1, .feature-image .lead {
+    z-index: 1;
+    position: relative;
+}

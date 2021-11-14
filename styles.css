@@ -57,7 +57,7 @@ footer p {
 }
 .feature-image::before {
     content: "";
-    background-image: url('/resources/images/andy-holmes-rCbdp8VCYhQ-unsplash.jpg');
+    background-image: url('./resources/images/andy-holmes-rCbdp8VCYhQ-unsplash.jpg');
     background-size: cover;
     background-position: 50%;
     background-repeat: no-repeat;

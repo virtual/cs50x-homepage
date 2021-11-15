@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', (event) => {
     let grid = document.querySelectorAll(".image-grid.homepage-grid > div");
     if (grid) {
-       loadImages(grid, 'artists', 'jpg');
+        loadImages(grid, 'artists', 'jpg');
     }
     todaysDate = new Date();
     todaysDate.setHours(0, 0, 0, 0);
@@ -19,20 +19,20 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }
 });
 
-function loadImages(grid, path, ext="png") {
+function loadImages(grid, path, ext = "png") {
     let i = 0;
     for (const griditem of grid) {
-        if (griditem.classList.contains('active')) { 
+        if (griditem.classList.contains('active')) {
             griditem.dataset.imgid = i;
             griditem.dataset.imgpath = path;
             i++;
 
-            griditem.addEventListener('click', function(event) {
+            griditem.addEventListener('click', function (event) {
                 showImg(this, griditem.dataset.imgid, griditem.dataset.imgpath, ext)
             });
         }
     }
-} 
+}
 function showImg(el, id, path, ext) {
     el.style.backgroundImage = `url('./resources/images/${path}/${id}.${ext}')`;
 }
